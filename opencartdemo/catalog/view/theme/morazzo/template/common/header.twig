@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html dir="{{ direction }}" lang="{{ lang }}">
+<head>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% if description %}
+      <meta name="description" content="{{ description }}" />
+    {% endif %}
+    {% if keywords %}
+      <meta name="keywords" content="{{ keywords }}" />
+    {% endif %}
+  <title>{{ title }}</title>
+  <base href="{{ base }}" />
+    <!-- Bootstrap Core CSS -->
+    <link href="catalog/view/theme/morazzo/stylesheet/css/bootstrap.min.css" rel="stylesheet" media="screen" />
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/main.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/blue.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/owl.carousel.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/owl.transitions.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/rateit.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/bootstrap-select.min.css" type="text/css">
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/more.css" type="text/css">
+    <!-- Icons/Glyphs -->
+    <link rel="stylesheet" href="catalog/view/theme/morazzo/stylesheet/css/font-awesome.css" type="text/css">
+    <!-- Fonts -->
+    <link href="//fonts.googleapis.com/css?family=Barlow:200,300,300i,400,400i,500,500i,600,700,800" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700,700italic,800" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    {% for style in styles %}
+        <link href="{{ style.href }}" type="text/css" rel="{{ style.rel }}" media="{{ style.media }}" />
+    {% endfor %}
+
+    {% for link in links %}
+      <link href="{{ link.href }}" rel="{{ link.rel }}" />
+    {% endfor %}
+
+    {% for script in scripts %}
+      <script src="{{ script }}" type="text/javascript"></script>
+    {% endfor %}
+
+    {% for analytic in analytics %}
+        {{ analytic }}
+    {% endfor %}
+
+</head>
+<body class="cnt-home">
+<!-- ============================================== HEADER ============================================== -->
+<header class="header-style-1">
+
+  <!-- ============================================== TOP MENU ============================================== -->
+  <div class="top-bar animate-dropdown">
+    <div class="container">
+      <div class="header-top-inner">
+        <div class="cnt-account">
+          <ul class="list-unstyled">
+            <li class="myaccount"><a href="#"><span>{{ text_account }}</span></a></li>
+            <li class="wishlist"><a href="#"><span>{{ text_wishlist }}</span></a></li>
+            <li class="header_cart hidden-xs"><a href="#"><span>{{ text_shopping_cart }}</span></a></li>
+            <li class="check"><a href="#"><span>{{ text_checkout }}</span></a></li>
+            <li class="login"><a href="#"><span>{{ text_login }}</span></a></li>
+          </ul>
+        </div>
+        <!-- /.cnt-account -->
+
+        <div class="cnt-block">
+          {{ currency }} {{ language }}
+        </div>
+        <!-- /.list-unstyled -->
+
+        <!-- /.cnt-cart -->
+        <div class="clearfix"></div>
+      </div>
+      <!-- /.header-top-inner -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.header-top -->
+  <!-- ============================================== TOP MENU : END ============================================== -->
+  <!-- ============================================== TOP MENU : END ============================================== -->
+  <div class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
+          <!-- ============================================================= LOGO ============================================================= -->
+          <div class="logo">{% if logo %}<a href="#"><img src="{{ logo }}" title="{{ name }}" alt="{{ name }}"></a>{% else %}
+          <h1><a href="#">{{ name }}</a></h1>
+          {% endif %}</div>
+          <!-- /.logo -->
+          <!-- ============================================================= LOGO : END ============================================================= --> </div>
+        <!-- /.logo-holder -->
+          <div class="col-lg-7 col-md-6 col-sm-8 col-xs-12 top-search-holder">
+              <!-- /.contact-row -->
+              <!-- ============================================================= SEARCH AREA ============================================================= -->
+             {{ searchwithcategories }}
+              <!-- /.search-area -->
+              <!-- ============================================================= SEARCH AREA : END ============================================================= --> </div>
+          <!-- /.top-search-holder -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 animate-dropdown top-cart-row">
+          <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+            {{ cart }}
+          <!-- /.dropdown-cart -->
+
+          <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= --> </div>
+        <!-- /.top-cart-row -->
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+  </div>
+  <!-- /.main-header -->
+  <!-- ============================================== NAVBAR ============================================== -->
+  {{ menu }}
+  <!-- /.header-nav -->
+  <!-- ============================================== NAVBAR : END ============================================== -->
+
+</header>

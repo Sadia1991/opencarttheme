@@ -1,0 +1,11 @@
+2021-10-11 11:18:03 - PHP Unknown:  Required parameter $selected follows optional parameter $id in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 106
+2021-10-11 11:18:03 - PHP Unknown:  Required parameter $selected follows optional parameter $level in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 162
+2021-10-11 11:18:03 - PHP Unknown:  Required parameter $megamenu_parent_id follows optional parameter $category in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 241
+2021-10-11 11:18:12 - PHP Unknown:  Required parameter $selected follows optional parameter $id in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 106
+2021-10-11 11:18:12 - PHP Unknown:  Required parameter $selected follows optional parameter $level in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 162
+2021-10-11 11:18:12 - PHP Unknown:  Required parameter $megamenu_parent_id follows optional parameter $category in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 241
+2021-10-11 11:23:11 - PHP Unknown:  Required parameter $selected follows optional parameter $id in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 106
+2021-10-11 11:23:11 - PHP Unknown:  Required parameter $selected follows optional parameter $level in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 162
+2021-10-11 11:23:11 - PHP Unknown:  Required parameter $megamenu_parent_id follows optional parameter $category in E:\xampp\htdocs\opencartdemo\admin\model\extension\menu\megamenu.php on line 241
+2021-10-11 13:55:25 - PHP Warning:  rename(E:\xampp\htdocs\opencartdemo\system\storage\cache\template\40\4066413.tmp,E:/xampp/htdocs/opencartdemo/system/storage/cache/template/40/4063161981a8dde5240fa40f097f9f031c206f5cc8f57b426eba9206d1397754.php): Access is denied (code: 5) in E:\xampp\htdocs\opencartdemo\system\storage\vendor\twig\twig\src\Cache\FilesystemCache.php on line 65
+2021-10-12 7:58:52 - PHP Unknown:  Required parameter $shopid follows optional parameter $parent_id in E:\xampp\htdocs\opencartdemo\catalog\model\catalog\category.php on line 61

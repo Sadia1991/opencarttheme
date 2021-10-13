@@ -1,0 +1,66 @@
+<div class="body-content outer-top-vs" id="top-banner-and-menu">
+  <div class="container">
+    <div class="row">
+      <!-- ============================================== SIDEBAR ============================================== -->
+      <div class="col-xs-12 col-sm-12 col-md-3 sidebar">
+
+
+      <!-- ================================== TOP NAVIGATION ================================== -->
+<div class="side-menu animate-dropdown outer-bottom-xs">
+  <div class="head"><i class="icon fa fa-align-justify fa-fw"></i> Categories</div>
+  <nav class="yamm megamenu-horizontal">
+    <ul class="nav">
+        {% for category in categories %}
+        {% if category.children %}
+      <li class="dropdown menu-item ">
+          {% else %}
+      <li class="dropdown menu-item first">
+            {% endif %}
+        <a href="{{ category.href }}" class="dropdown-toggle" data-toggle="dropdown">{{ category.name }}</a>
+        <ul class="dropdown-menu mega-menu">
+          <li class="yamm-content">
+            <div class="row">
+                {% for child in category.children %}
+                {% if child.gchildren is defined %}
+              <div class="col-sm-12 col-md-3">
+                <h2 class="title"><a href="{{ child.href }}">{{ child.name }}</a></h2>
+                <ul class="links list-unstyled">
+                    {% for gchild in child.gchildren %}
+                      <li><a href="{{ gchild.href }}">{{ gchild.name }}</a></li>
+                    {% endfor %}
+                </ul>
+              </div>
+              <!-- /.col -->
+                {% else %}
+
+
+                  <div class="col-sm-12 col-md-3">
+                    <h2 class="title"><a href="{{ child.href }}">{{ child.name }}</a></h2>
+
+                  </div>
+                  <!-- /.col -->
+
+
+
+
+                  <!-- /.yamm-content -->
+
+
+                {% endif %}
+
+                {% endfor %}
+            </div>
+            <!-- /.row -->
+          </li>
+          <!-- /.yamm-content -->
+        </ul>
+        <!-- /.dropdown-menu --> </li>
+      <!-- /.menu-item -->
+
+        {% endfor %}
+    </ul>
+    <!-- /.nav -->
+  </nav>
+  <!-- /.megamenu-horizontal -->
+</div>
+<!-- /.side-menu -->
